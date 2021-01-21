@@ -1,0 +1,13 @@
+C:\Users\carlm\source\repos\MCD\MCD\bin\Debug\MCD.exe.config
+C:\Users\carlm\source\repos\MCD\MCD\bin\Debug\MCD.exe
+C:\Users\carlm\source\repos\MCD\MCD\bin\Debug\MCD.pdb
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.csprojAssemblyReference.cache
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.Properties.Resources.resources
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.csproj.GenerateResource.cache
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.csproj.CoreCompileInputs.cache
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.exe
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.pdb
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.Form1.resources
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.Form2.resources
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.Form3.resources
+C:\Users\carlm\source\repos\MCD\MCD\obj\Debug\MCD.Form4.resources
