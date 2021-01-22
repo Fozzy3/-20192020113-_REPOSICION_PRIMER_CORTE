@@ -71,8 +71,8 @@ namespace MCD
         {
             double numero1 = Convert.ToDouble(textBox1.Text);
             double numero2 = Convert.ToDouble(textBox2.Text);
-            double numero3 = Convert.ToDouble(textBox2.Text);
-            double numero4 = Convert.ToDouble(textBox2.Text);
+            double numero3 = Convert.ToDouble(textBox3.Text);
+            double numero4 = Convert.ToDouble(textBox4.Text);
 
             double a = 2;
             double mcd = 1;
@@ -93,6 +93,15 @@ namespace MCD
             respuesta = mcd.ToString();
 
             label2.Text = respuesta;
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            label2.Text = "";
         }
     }
 }

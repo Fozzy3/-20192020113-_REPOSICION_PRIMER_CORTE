@@ -27,7 +27,8 @@ namespace MCD
             else
             {
                 v.Handled = true;
-                MessageBox.Show("Solo Numeros");
+                MessageBox.Show("Ingresar solo valores numericos enteros", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
         }
     }

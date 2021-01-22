@@ -53,7 +53,7 @@ namespace MCD
         {
             double numero1 = Convert.ToDouble(textBox1.Text);
             double numero2 = Convert.ToDouble(textBox2.Text);
-            double numero3 = Convert.ToDouble(textBox2.Text);
+            double numero3 = Convert.ToDouble(textBox3.Text);
 
             double a = 2;
             double mcd = 1;
@@ -77,9 +77,9 @@ namespace MCD
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "0";
-            textBox2.Text = "0";
-            textBox3.Text = "0";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
             label2.Text = "";
         }
     
