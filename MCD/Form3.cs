@@ -39,6 +39,7 @@ namespace MCD
             Validar.SoloNumeros(e);
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -140,6 +141,5 @@ namespace MCD
             textBox4.Text = "";
             label2.Text = "";
         }
-    
     }
 }
