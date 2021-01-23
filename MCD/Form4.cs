@@ -60,78 +60,87 @@ namespace MCD
             texto1 = textBox1.Text.Replace(" ", "");
             texto2 = textBox2.Text.Replace(" ", "");
             texto3 = textBox3.Text.Replace(" ", "");
-            texto4 = textBox3.Text.Replace(" ", "");
-            numero1 = Convert.ToInt32(texto1);
-            numero2 = Convert.ToInt32(texto2);
-            numero3 = Convert.ToInt32(texto3);
-            numero4 = Convert.ToInt32(texto4);
+            texto4 = textBox4.Text.Replace(" ", "");
 
-            salida = "Primer Procedimiento: " + Environment.NewLine;
-
-            if (numero1 == 0 || numero2 == 0 || numero3 == 0 || numero4 == 0)
+            if (texto1 == "" || texto2 == "" || texto3 == "" || texto4 == "")
             {
-                MessageBox.Show("Ningun numero puede ser 0", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errores = true;
+                MessageBox.Show("Los campos no pueden estar vacios", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                do
-                {
-                    residuo = numero1 % numero2;
-                    complemento = numero1 / numero2;
-                    salida = salida + string.Empty;
-                    salida = salida + string.Format(numero1 + "=" + numero2 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
+                numero1 = Convert.ToInt32(texto1);
+                numero2 = Convert.ToInt32(texto2);
+                numero3 = Convert.ToInt32(texto3);
+                numero4 = Convert.ToInt32(texto4);
 
-                    if (residuo != 0)
-                    {
-                        numero1 = numero2;
-                        numero2 = residuo;
-                    }
-                    else
-                    {
-                        mcd = numero2;
-                    }
-                } while (residuo != 0);
-                residuo = 0;
-                complemento = 0;
-                salida = salida + Environment.NewLine + "Segundo Procedimiento: " + Environment.NewLine;
-                do
-                {
-                    residuo = numero2 % numero3;
-                    complemento = numero2 / numero3;
-                    salida = salida + string.Empty;
-                    salida = salida + string.Format(numero2 + "=" + numero3 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
+                salida = "Primer Procedimiento: " + Environment.NewLine;
 
-                    if (residuo != 0)
-                    {
-                        numero2 = numero3;
-                        numero3 = residuo;
-                    }
-                    else
-                    {
-                        mcd = numero3;
-                    }
-                } while (residuo != 0);
-                residuo = 0;
-                complemento = 0;
-                salida = salida + Environment.NewLine + "Tercer Procedimiento: " + Environment.NewLine;
-                do
+                if (numero1 == 0 || numero2 == 0 || numero3 == 0 || numero4 == 0)
                 {
-                    residuo = numero3 % numero4;
-                    complemento = numero3 / numero4;
-                    salida = salida + string.Empty;
-                    salida = salida + string.Format(numero3 + "=" + numero4 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
+                    MessageBox.Show("Ningun numero puede ser 0", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    errores = true;
+                }
+                else
+                {
+                    do
+                    {
+                        residuo = numero1 % numero2;
+                        complemento = numero1 / numero2;
+                        salida = salida + string.Empty;
+                        salida = salida + string.Format(numero1 + "=" + numero2 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
 
-                    if (residuo != 0)
+                        if (residuo != 0)
+                        {
+                            numero1 = numero2;
+                            numero2 = residuo;
+                        }
+                        else
+                        {
+                            mcd = numero2;
+                        }
+                    } while (residuo != 0);
+                    residuo = 0;
+                    complemento = 0;
+                    salida = salida + Environment.NewLine + "Segundo Procedimiento: " + Environment.NewLine;
+                    do
                     {
-                        numero3 = numero4;
-                        numero4 = residuo;
-                    }
-                    else
+                        residuo = numero2 % numero3;
+                        complemento = numero2 / numero3;
+                        salida = salida + string.Empty;
+                        salida = salida + string.Format(numero2 + "=" + numero3 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
+
+                        if (residuo != 0)
+                        {
+                            numero2 = numero3;
+                            numero3 = residuo;
+                        }
+                        else
+                        {
+                            mcd = numero3;
+                        }
+                    } while (residuo != 0);
+                    residuo = 0;
+                    complemento = 0;
+                    salida = salida + Environment.NewLine + "Tercer Procedimiento: " + Environment.NewLine;
+                    do
                     {
-                        mcd = numero4;
-                    }
-                } while (residuo != 0);
+                        residuo = numero3 % numero4;
+                        complemento = numero3 / numero4;
+                        salida = salida + string.Empty;
+                        salida = salida + string.Format(numero3 + "=" + numero4 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
+
+                        if (residuo != 0)
+                        {
+                            numero3 = numero4;
+                            numero4 = residuo;
+                        }
+                        else
+                        {
+                            mcd = numero4;
+                        }
+                    } while (residuo != 0);
+                }
             }
             if (errores == true)
             {

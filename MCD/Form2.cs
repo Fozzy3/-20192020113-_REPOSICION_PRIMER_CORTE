@@ -54,7 +54,7 @@ namespace MCD
             if (texto1 == "" || texto2 == "")
             {
                 errores = true;
-                MessageBox.Show("Los campos no pueden estar vacios", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden estar vacios", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
