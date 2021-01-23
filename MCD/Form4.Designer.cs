@@ -76,6 +76,7 @@ namespace MCD
             this.textBox3.Size = new System.Drawing.Size(109, 34);
             this.textBox3.TabIndex = 25;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
             // 
@@ -85,7 +86,7 @@ namespace MCD
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(109, 34);
             this.textBox2.TabIndex = 24;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -95,7 +96,7 @@ namespace MCD
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(109, 34);
             this.textBox1.TabIndex = 23;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label1
             // 
@@ -116,6 +117,7 @@ namespace MCD
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(109, 34);
             this.textBox4.TabIndex = 28;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // button3
             // 

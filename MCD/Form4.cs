@@ -17,16 +17,6 @@ namespace MCD
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -38,23 +28,6 @@ namespace MCD
             regresar.Visible = true;
             Visible = false;
             this.Dispose();
-        }
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -184,6 +157,26 @@ namespace MCD
             textBox4.Text = "";
             textBox5.Text = "";
             label2.Text = "";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
         }
     }
 }

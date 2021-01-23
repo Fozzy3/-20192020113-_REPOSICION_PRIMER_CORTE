@@ -25,21 +25,6 @@ namespace MCD
             this.Dispose();
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.SoloNumeros(e);
-        }
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -140,6 +125,21 @@ namespace MCD
             textBox3.Text = "";
             textBox4.Text = "";
             label2.Text = "";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
         }
     }
 }
