@@ -12,7 +12,6 @@ namespace MCD
 {
     public partial class Form3 : Form
     {
-        string respuesta;
         public Form3()
         {
             InitializeComponent();
@@ -45,34 +44,92 @@ namespace MCD
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
+            textBox4.Text = "";
             label2.Text = "";
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            double numero1 = Convert.ToDouble(textBox1.Text);
-            double numero2 = Convert.ToDouble(textBox2.Text);
-            double numero3 = Convert.ToDouble(textBox3.Text);
+            Int32 mcd = 1;
+            Int32 residuo;
+            Int32 complemento;
+            Int32 numero1;
+            Int32 numero2;
+            Int32 numero3;
+            string texto1;
+            string texto2;
+            string texto3;
+            string salida = "";
+            bool errores = false;
+            // Eliminamos espacios de la cadena para evitar errores
 
-            double a = 2;
-            double mcd = 1;
+            texto1 = textBox1.Text.Replace(" ", "");
+            texto2 = textBox2.Text.Replace(" ", "");
+            texto3 = textBox3.Text.Replace(" ", "");
+            numero1 = Convert.ToInt32(texto1);
+            numero2 = Convert.ToInt32(texto2);
+            numero3 = Convert.ToInt32(texto3);
 
-            while (a <= numero1 && a <= numero2 && a <= numero3)
+            salida = "Primer Procedimiento: " + Environment.NewLine;
+
+            if (numero1 == 0 || numero2 == 0 || numero3 == 0)
             {
-                while (numero1 % a == 0 && numero2 % a == 0 && numero3 % a == 0)
-                {
-                    mcd = mcd * a;
-                    numero1 = numero1 / a;
-                    numero2 = numero2 / a;
-                    numero3 = numero3 / a;
-                }
-                a = a + 1;
+                MessageBox.Show("Ningun numero puede ser 0", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errores = true;
             }
+            else
+            {
+                do
+                {
+                    residuo = numero1 % numero2;
+                    complemento = numero1 / numero2;
+                    salida = salida + string.Empty;
+                    salida = salida + string.Format(numero1 + "=" + numero2 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
 
-            respuesta = mcd.ToString();
+                    if (residuo != 0)
+                    {
+                        numero1 = numero2;
+                        numero2 = residuo;
+                    }
+                    else
+                    {
+                        mcd = numero2;
+                    }
+                } while (residuo != 0);
+                residuo = 0;
+                complemento = 0;
+                salida = salida + Environment.NewLine + "Segundo Procedimiento: " + Environment.NewLine;
+                do
+                {
+                    residuo = numero2 % numero3;
+                    complemento = numero2 / numero3;
+                    salida = salida + string.Empty;
+                    salida = salida + string.Format(numero2 + "=" + numero3 + "*" + complemento + "+" + residuo + "\n") + Environment.NewLine;
 
-            label2.Text = respuesta;
+                    if (residuo != 0)
+                    {
+                        numero2 = numero3;
+                        numero3 = residuo;
+                    }
+                    else
+                    {
+                        mcd = numero3;
+                    }
+                } while (residuo != 0);
+            }
+            if (errores == true)
+            {
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                label2.Text = "";
+            }
+            else
+            {
+                label2.Text = mcd.ToString();
+                textBox4.Text = salida;
+            }
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -80,6 +137,7 @@ namespace MCD
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
+            textBox4.Text = "";
             label2.Text = "";
         }
     
